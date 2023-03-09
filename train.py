@@ -1,3 +1,5 @@
+import torch
+
 with open('input.txt', 'r', encoding='utf-8') as f:
     text = f.read()
 
@@ -14,3 +16,5 @@ encode = lambda s: [stoi[c] for c in s]
 # decoder: take a list of integers, output a string
 decode = lambda l: ''.join([itos[i] for i in l])
 
+# encode the entire text dataset and store into a torch.Tensor
+data = torch.tensor(encode(text), dtype=torch.long)
