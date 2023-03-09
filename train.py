@@ -1,5 +1,5 @@
 # import torch
-import requests
+import torch 
 
 with open('input.txt', 'r', encoding='utf-8') as f:
     text = f.read()
@@ -18,6 +18,4 @@ encode = lambda s: [stoi[c] for c in s]
 decode = lambda l: ''.join([itos[i] for i in l])
 
 # encode the entire text dataset and store into a torch.Tensor
-# data = torch.tensor(encode(text), dtype=torch.long)
-r  = requests.get('https://httpbin.org/basic-auth/user/pass', auth=('user', 'pass'))
-print (r.status_code)
+data = torch.tensor(encode(text), dtype=torch.long)
