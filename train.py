@@ -23,3 +23,8 @@ data = torch.tensor(encode(text), dtype=torch.long)
 
 # get the first 1,000 characters in the text
 # print(data[:1000])
+
+# split up data into training set (90%) and validation (last 10%)
+n = int(0.9 * len(data))
+train_data = data[:n]
+val_data = data[n:]
