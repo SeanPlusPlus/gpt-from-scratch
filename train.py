@@ -14,5 +14,3 @@ encode = lambda s: [stoi[c] for c in s]
 # decoder: take a list of integers, output a string
 decode = lambda l: ''.join([itos[i] for i in l])
 
-print (encode("hii there"))
-print (decode(encode("hii there")))
